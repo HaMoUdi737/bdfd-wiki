@@ -2907,8 +2907,8 @@ margin-left:40px
     /* ===== Categories Grid ===== */
     .seh-categories{
       display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
     }
     .seh-cat-card{
       background: #141414;
@@ -3357,7 +3357,7 @@ margin-left:40px
     @media (max-width: 900px){
       .seh-hero h1{font-size: 30px}
       .seh-hero h1 .count{font-size: 38px}
-      .seh-categories{grid-template-columns: repeat(2, 1fr)}
+      .seh-categories{grid-template-columns: repeat(2, 1fr); gap: 12px}
       .seh-main-layout{grid-template-columns: 1fr}
       .seh-top-methods{position: static}
       .seh-articles-grid{grid-template-columns: 1fr}
@@ -3697,8 +3697,8 @@ margin-left:40px
       </a>
       <ul class='seh-nav-links'>
         <li><a class='active' expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
-        <li><a href='/search/label/طرق الربح'>طرق الربح</a></li>
-        <li><a href='/search/label/الذكاء الاصطناعي'>الذكاء الاصطناعي</a></li>
+        <li><a href='/search/label/اسرار الربح'>اسرار الربح</a></li>
+        <li><a href='/search/label/ذكاء اصطناعي'>ذكاء اصطناعي</a></li>
         <li><a href='/search/label/العمل الحر'>العمل الحر</a></li>
         <li><a href='/p/blog-page_26.html'>اتصل بنا</a></li>
         <li><a href='/p/blog-page_828.html'>تابعنا</a></li>
@@ -3754,45 +3754,122 @@ margin-left:40px
           <div class='line'/>
         </div>
         <div class='seh-categories'>
-          <a class='seh-cat-card' href='/search/label/الربح من اليوتيوب'>
-            <div class='cat-icon'><i class='fab fa-youtube'/></div>
-            <h3>الربح من اليوتيوب</h3>
-            <span class='cat-count'>17 طريقة</span>
+          <!-- الصف 1 -->
+          <a class='seh-cat-card' href='/search/label/اجابة واستبيان'>
+            <div class='cat-icon'><i class='fas fa-clipboard-list'/></div>
+            <h3>اجابة واستبيان</h3>
           </a>
-          <a class='seh-cat-card' href='/search/label/الذكاء الاصطناعي'>
-            <div class='cat-icon'><i class='fas fa-robot'/></div>
-            <h3>الذكاء الاصطناعي</h3>
-            <span class='cat-count'>18 طريقة</span>
+          <a class='seh-cat-card' href='/search/label/اسرار الربح'>
+            <div class='cat-icon'><i class='fas fa-key'/></div>
+            <h3>اسرار الربح</h3>
           </a>
+          <a class='seh-cat-card' href='/search/label/افليبيت ماركتنج'>
+            <div class='cat-icon'><i class='fas fa-chart-line'/></div>
+            <h3>افليبيت ماركتنج</h3>
+          </a>
+          <!-- الصف 2 -->
           <a class='seh-cat-card' href='/search/label/العمل الحر'>
             <div class='cat-icon'><i class='fas fa-briefcase'/></div>
             <h3>العمل الحر</h3>
-            <span class='cat-count'>20 طريقة</span>
           </a>
-          <a class='seh-cat-card' href='/search/label/التطبيقات والمواقع'>
-            <div class='cat-icon'><i class='fas fa-mobile-alt'/></div>
-            <h3>التطبيقات والمواقع</h3>
-            <span class='cat-count'>15 طريقة</span>
+          <a class='seh-cat-card' href='/search/label/بيع الصور'>
+            <div class='cat-icon'><i class='fas fa-camera'/></div>
+            <h3>بيع الصور</h3>
           </a>
-          <a class='seh-cat-card' href='/search/label/التجارة الإلكترونية'>
+          <a class='seh-cat-card' href='/search/label/تجارة الكترونية'>
             <div class='cat-icon'><i class='fas fa-shopping-cart'/></div>
-            <h3>التجارة الإلكترونية</h3>
-            <span class='cat-count'>12 طريقة</span>
+            <h3>تجارة الكترونية</h3>
           </a>
-          <a class='seh-cat-card' href='/search/label/الكتابة والتدوين'>
-            <div class='cat-icon'><i class='fas fa-pen-nib'/></div>
-            <h3>الكتابة والتدوين</h3>
-            <span class='cat-count'>10 طرق</span>
+          <!-- الصف 3 -->
+          <a class='seh-cat-card' href='/search/label/تدريس وتدريب'>
+            <div class='cat-icon'><i class='fas fa-chalkboard-teacher'/></div>
+            <h3>تدريس وتدريب</h3>
           </a>
-          <a class='seh-cat-card' href='/search/label/التسويق بالعمولة'>
+          <a class='seh-cat-card' href='/search/label/تطبيقات الربح'>
+            <div class='cat-icon'><i class='fas fa-mobile-alt'/></div>
+            <h3>تطبيقات الربح</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/تعليق صوتي'>
+            <div class='cat-icon'><i class='fas fa-microphone'/></div>
+            <h3>تعليق صوتي</h3>
+          </a>
+          <!-- الصف 4 -->
+          <a class='seh-cat-card' href='/search/label/جرافيك ديزاين'>
+            <div class='cat-icon'><i class='fas fa-palette'/></div>
+            <h3>جرافيك ديزاين</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/ديجتال ماركتنج'>
             <div class='cat-icon'><i class='fas fa-bullhorn'/></div>
-            <h3>التسويق بالعمولة</h3>
-            <span class='cat-count'>14 طريقة</span>
+            <h3>ديجتال ماركتنج</h3>
           </a>
-          <a class='seh-cat-card' href='/search/label/الألعاب والربح'>
-            <div class='cat-icon'><i class='fas fa-gamepad'/></div>
-            <h3>الألعاب والربح</h3>
-            <span class='cat-count'>9 طرق</span>
+          <a class='seh-cat-card' href='/search/label/ذكاء اصطناعي'>
+            <div class='cat-icon'><i class='fas fa-robot'/></div>
+            <h3>ذكاء اصطناعي</h3>
+          </a>
+          <!-- الصف 5 -->
+          <a class='seh-cat-card' href='/search/label/ربح الفيسبوك'>
+            <div class='cat-icon'><i class='fab fa-facebook'/></div>
+            <h3>ربح الفيسبوك</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/ربح اليوتيوب'>
+            <div class='cat-icon'><i class='fab fa-youtube'/></div>
+            <h3>ربح اليوتيوب</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/ربح جوجل'>
+            <div class='cat-icon'><i class='fab fa-google'/></div>
+            <h3>ربح جوجل</h3>
+          </a>
+          <!-- الصف 6 -->
+          <a class='seh-cat-card' href='/search/label/ربح من خمسات'>
+            <div class='cat-icon'><i class='fas fa-hand-holding-usd'/></div>
+            <h3>ربح من خمسات</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/ربح من كانفا'>
+            <div class='cat-icon'><i class='fas fa-paint-brush'/></div>
+            <h3>ربح من كانفا</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/ربح من مستقل'>
+            <div class='cat-icon'><i class='fas fa-laptop-code'/></div>
+            <h3>ربح من مستقل</h3>
+          </a>
+          <!-- الصف 7 -->
+          <a class='seh-cat-card' href='/search/label/رسم وتصميم'>
+            <div class='cat-icon'><i class='fas fa-pencil-ruler'/></div>
+            <h3>رسم وتصميم</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/سوشيال ميديا'>
+            <div class='cat-icon'><i class='fas fa-share-alt'/></div>
+            <h3>سوشيال ميديا</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/صناعة المحتوى'>
+            <div class='cat-icon'><i class='fas fa-video'/></div>
+            <h3>صناعة المحتوى</h3>
+          </a>
+          <!-- الصف 8 -->
+          <a class='seh-cat-card' href='/search/label/طباعة بالطلب'>
+            <div class='cat-icon'><i class='fas fa-tshirt'/></div>
+            <h3>طباعة بالطلب</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/قصص نجاح'>
+            <div class='cat-icon'><i class='fas fa-trophy'/></div>
+            <h3>قصص نجاح</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/كتابة وترجمة'>
+            <div class='cat-icon'><i class='fas fa-pen-nib'/></div>
+            <h3>كتابة وترجمة</h3>
+          </a>
+          <!-- الصف 9 -->
+          <a class='seh-cat-card' href='/search/label/كتب ومدونات'>
+            <div class='cat-icon'><i class='fas fa-book'/></div>
+            <h3>كتب ومدونات</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/كورسات الربح'>
+            <div class='cat-icon'><i class='fas fa-graduation-cap'/></div>
+            <h3>كورسات الربح</h3>
+          </a>
+          <a class='seh-cat-card' href='/search/label/مواقع الربح'>
+            <div class='cat-icon'><i class='fas fa-globe'/></div>
+            <h3>مواقع الربح</h3>
           </a>
         </div>
       </section>
@@ -4995,18 +5072,19 @@ margin-left:40px
           <h3>روابط سريعة</h3>
           <ul>
             <li><a expr:href='data:blog.homepageUrl'>الرئيسية</a></li>
-            <li><a href='/search/label/طرق الربح'>طرق الربح</a></li>
-            <li><a href='/search/label/الذكاء الاصطناعي'>الذكاء الاصطناعي</a></li>
+            <li><a href='/search/label/ربح اليوتيوب'>ربح اليوتيوب</a></li>
+            <li><a href='/search/label/ذكاء اصطناعي'>ذكاء اصطناعي</a></li>
             <li><a href='/search/label/العمل الحر'>العمل الحر</a></li>
+            <li><a href='/search/label/تطبيقات الربح'>تطبيقات الربح</a></li>
           </ul>
         </div>
         <div class='seh-footer-col'>
           <h3>التصنيفات</h3>
           <ul>
-            <li><a href='/search/label/الربح من اليوتيوب'>الربح من اليوتيوب</a></li>
-            <li><a href='/search/label/التجارة الإلكترونية'>التجارة الإلكترونية</a></li>
-            <li><a href='/search/label/التسويق بالعمولة'>التسويق بالعمولة</a></li>
-            <li><a href='/search/label/الكتابة والتدوين'>الكتابة والتدوين</a></li>
+            <li><a href='/search/label/تجارة الكترونية'>تجارة الكترونية</a></li>
+            <li><a href='/search/label/ديجتال ماركتنج'>ديجتال ماركتنج</a></li>
+            <li><a href='/search/label/كتابة وترجمة'>كتابة وترجمة</a></li>
+            <li><a href='/search/label/ربح الفيسبوك'>ربح الفيسبوك</a></li>
           </ul>
         </div>
         <div class='seh-footer-col'>
