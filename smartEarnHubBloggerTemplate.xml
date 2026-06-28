@@ -3700,7 +3700,7 @@ margin-left:40px
         <li><a href='/search/label/طرق الربح'>طرق الربح</a></li>
         <li><a href='/search/label/الذكاء الاصطناعي'>الذكاء الاصطناعي</a></li>
         <li><a href='/search/label/العمل الحر'>العمل الحر</a></li>
-        <li><a href='/p/contact.html'>اتصل بنا</a></li>
+        <li><a href='/p/blog-page_26.html'>اتصل بنا</a></li>
       </ul>
       <div class='seh-nav-icons'>
         <button class='seh-mobile-toggle' onclick='document.querySelector(&apos;.seh-nav-links&apos;).classList.toggle(&apos;show-mobile&apos;)'>
@@ -5011,10 +5011,10 @@ margin-left:40px
         <div class='seh-footer-col'>
           <h3>تواصل معنا</h3>
           <ul>
-            <li><a href='/p/contact.html'>صفحة التواصل</a></li>
-            <li><a href='/p/about.html'>من نحن</a></li>
-            <li><a href='/p/privacy.html'>سياسة الخصوصية</a></li>
-            <li><a href='/p/terms.html'>الشروط والأحكام</a></li>
+            <li><a href='/p/blog-page_26.html'>اتصل بنا</a></li>
+            <li><a href='/p/blog-page_575.html'>من نحن</a></li>
+            <li><a href='/p/blog-page_28.html'>سياسة الخصوصية</a></li>
+            <li><a href='/p/blog-page_859.html'>الشروط والأحكام</a></li>
           </ul>
         </div>
       </div>
