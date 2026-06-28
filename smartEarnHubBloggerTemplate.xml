@@ -3677,6 +3677,8 @@ margin-left:40px
     <b:include data='blog' name='google-analytics'/>
 
     <script async='async' src='https://www.gstatic.com/external_hosted/clipboardjs/clipboard.min.js'/>
+    <!-- Google AdSense -->
+    <script async='async' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7329339790799775' crossorigin='anonymous'/>
   </head>
 
   <body>
@@ -3873,6 +3875,17 @@ margin-left:40px
           </a>
         </div>
       </section>
+
+      <!-- AdSense Display Ad - بين التصنيفات والمحتوى -->
+      <div class='seh-ad-container' style='margin: 25px auto; text-align: center; max-width: 900px;'>
+        <ins class='adsbygoogle'
+             style='display:block'
+             data-ad-client='ca-pub-7329339790799775'
+             data-ad-slot='3980591697'
+             data-ad-format='auto'
+             data-full-width-responsive='true'/>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
     </b:if>
 
     <div class='page'>
@@ -4492,6 +4505,18 @@ margin-left:40px
       <b:include data='post' name='post'/>
     </div>
 
+    <!-- AdSense Autorelaxed Ad - بعد المقال وقبل التعليقات -->
+    <b:if cond='data:view.isSingleItem'>
+      <div class='seh-ad-container' style='margin: 25px 0; text-align: center;'>
+        <ins class='adsbygoogle'
+             style='display:block'
+             data-ad-format='autorelaxed'
+             data-ad-client='ca-pub-7329339790799775'
+             data-ad-slot='2260315918'/>
+        <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+      </div>
+    </b:if>
+
     <!-- Comments -->
     <b:include cond='data:view.isSingleItem' data='post' name='commentPicker'/>
 
@@ -4501,6 +4526,19 @@ margin-left:40px
 
   <!-- Show ad outside post container (between posts) for feed pages. -->
   <b:include cond='data:view.isMultipleItems and data:post.includeAd' data='post' name='inlineAd'/>
+
+  <!-- AdSense In-Feed Ad - بين المقالات في الصفحة الرئيسية -->
+  <b:if cond='data:view.isMultipleItems and data:post.includeAd'>
+    <div class='seh-ad-container' style='margin: 20px 0; text-align: center;'>
+      <ins class='adsbygoogle'
+           style='display:block'
+           data-ad-format='fluid'
+           data-ad-layout-key='-5o+c5-4-4c+mv'
+           data-ad-client='ca-pub-7329339790799775'
+           data-ad-slot='3573397582'/>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
+  </b:if>
 </b:includable>
                     <b:includable id='postCommentsLink'>
   <b:if cond='data:view.isMultipleItems'>
