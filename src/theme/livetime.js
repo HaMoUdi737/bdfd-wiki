@@ -1,32 +1,18 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var day = new Date().getDate();
-    var time = new Date().getTime();
-    var second = new Date().getSeconds();
-    var minute = new Date().getMinutes();
-    var hour = new Date().getHours();
+    var now = new Date();
 
-    var dayElement = document.getElementById('day-mark');
-    if (dayElement) {
-        dayElement.innerHTML = "Current Day: " + day;
-    }
+    var timeMarkers = [
+        { id: 'day-mark',    label: 'Current Day',       value: now.getDate() },
+        { id: 'unix-mark',   label: 'Current Unix-time', value: now.getTime() },
+        { id: 'second-mark', label: 'Current Second',    value: now.getSeconds() },
+        { id: 'minute-mark', label: 'Current Minute',    value: now.getMinutes() },
+        { id: 'hour-mark',   label: 'Current Hour',      value: now.getHours() }
+    ];
 
-    var unixElement = document.getElementById('unix-mark');
-    if (unixElement) {
-        unixElement.innerHTML = "Current Unix-time: " + time;
-    }
-
-    var secondElement = document.getElementById('second-mark');
-    if (secondElement) {
-        secondElement.innerHTML = "Current Second: " + second;
-    }
-
-    var minuteElement = document.getElementById('minute-mark');
-    if (minuteElement) {
-        minuteElement.innerHTML = "Current Minute: " + minute;
-    }
-
-    var hourElement = document.getElementById('hour-mark');
-    if (hourElement) {
-        hourElement.innerHTML = "Current Hour: " + hour;
-    }
+    timeMarkers.forEach(function(marker) {
+        var element = document.getElementById(marker.id);
+        if (element) {
+            element.innerHTML = marker.label + ": " + marker.value;
+        }
+    });
 });
