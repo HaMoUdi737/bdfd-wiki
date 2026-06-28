@@ -124,11 +124,11 @@ if (window.playground_copyable) {
 		}
 
 		let previousTheme;
-		try { previousTheme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+		try { previousTheme = localStorage.getItem('mdbook-theme'); } catch (e) { console.warn('Failed to read theme from localStorage:', e); }
 		if (previousTheme === null || previousTheme === undefined) { previousTheme = default_theme; }
 
 		if (store) {
-			try { localStorage.setItem('mdbook-theme', theme); } catch (e) { }
+			try { localStorage.setItem('mdbook-theme', theme); } catch (e) { console.warn('Failed to save theme to localStorage:', e); }
 		}
 
 		html.classList.remove(previousTheme);
@@ -137,7 +137,7 @@ if (window.playground_copyable) {
 
 	// Set theme
 	let theme;
-	try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+	try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { console.warn('Failed to read theme from localStorage:', e); }
 	if (theme === null || theme === undefined) { theme = default_theme; }
 
 	set_theme(theme, false);
@@ -221,7 +221,7 @@ if (window.playground_copyable) {
 		});
 		sidebarToggleButton.setAttribute('aria-expanded', true);
 		sidebar.setAttribute('aria-hidden', false);
-		try { localStorage.setItem('mdbook-sidebar', 'visible'); } catch (e) { }
+		try { localStorage.setItem('mdbook-sidebar', 'visible'); } catch (e) { console.warn('Failed to save sidebar state to localStorage:', e); }
 	}
 
 
@@ -243,7 +243,7 @@ if (window.playground_copyable) {
 		});
 		sidebarToggleButton.setAttribute('aria-expanded', false);
 		sidebar.setAttribute('aria-hidden', true);
-		try { localStorage.setItem('mdbook-sidebar', 'hidden'); } catch (e) { }
+		try { localStorage.setItem('mdbook-sidebar', 'hidden'); } catch (e) { console.warn('Failed to save sidebar state to localStorage:', e); }
 	}
 
 	// Toggle sidebar

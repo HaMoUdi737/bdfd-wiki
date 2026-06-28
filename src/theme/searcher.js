@@ -469,12 +469,19 @@ window.search = window.search || {};
     }
 
     fetch(path_to_root + 'searchindex.json')
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Search index fetch failed: ' + response.status + ' ' + response.statusText);
+            }
+            return response.json();
+        })
         .then(json => init(json))        
         .catch(error => { // Try to load searchindex.js if fetch failed
+            console.warn('Failed to load searchindex.json, falling back to searchindex.js:', error);
             var script = document.createElement('script');
             script.src = path_to_root + 'searchindex.js';
             script.onload = () => init(window.search);
+            script.onerror = (e) => console.error('Failed to load search index:', e);
             document.head.appendChild(script);
         });
 

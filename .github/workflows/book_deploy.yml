@@ -67,6 +67,7 @@ jobs:
           git add -A
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git diff --cached --quiet && echo "No changes to deploy" && exit 0
           git commit -m "Deploy $GITHUB_SHA to gh-pages"
           git push --force --set-upstream origin gh-pages
 
@@ -95,6 +96,7 @@ jobs:
           git add -A
           git config user.name github-actions[bot]
           git config user.email 41898282+github-actions[bot]@users.noreply.github.com
+          git diff --cached --quiet && echo "No changes to deploy" && exit 0
           git commit -m "Deploy nightly $GITHUB_SHA to gh-pages"
           git push --force --set-upstream origin gh-pages
 

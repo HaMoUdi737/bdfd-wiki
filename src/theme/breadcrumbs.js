@@ -11,7 +11,10 @@ const KEYS = Object.keys(MAP);
 
 function getNameFromTitle() {
     let index = document.title.indexOf('-');
-    return document.title.substring(0, index-1);
+    if (index === -1) {
+        return document.title;
+    }
+    return document.title.substring(0, index - 1);
 }
 
 let root = "/bdfd-wiki/"
