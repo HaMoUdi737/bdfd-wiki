@@ -4461,6 +4461,17 @@ margin-left:40px
   <!-- If metaDescription is empty, use the post body as the schema.org description too, for G+/FB snippeting. -->
   <div class='post-body entry-content float-container' expr:id='&quot;post-body-&quot; + data:post.id'>
     <data:post.body/>
+    <!-- AdSense In-Article Ad -->
+    <div class='seh-ad-container' style='margin: 20px 0; text-align: center;'>
+      <script async='async' src='https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7329339790799775' crossorigin='anonymous'/>
+      <ins class='adsbygoogle'
+           style='display:block; text-align:center;'
+           data-ad-layout='in-article'
+           data-ad-format='fluid'
+           data-ad-client='ca-pub-7329339790799775'
+           data-ad-slot='5296778456'/>
+      <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+    </div>
   </div>
 </b:includable>
                     <b:includable id='postBodySnippet' var='post'>
