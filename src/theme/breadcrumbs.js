@@ -24,7 +24,13 @@ if (path.startsWith("nightly")) {
 if (path.endsWith(".html"))
     path = path.substring(0, path.length - 5);
 
-document.write(`<a href="${root}">Home</a>`);
+const breadcrumbContainer = document.currentScript.parentElement;
+
+const homeLink = document.createElement('a');
+homeLink.href = root;
+homeLink.textContent = 'Home';
+breadcrumbContainer.appendChild(homeLink);
+
 path.split('/').forEach((segment, i, segments) => {
     let name = MAP[segment.toLocaleLowerCase()];
     if (!name) {
@@ -34,5 +40,10 @@ path.split('/').forEach((segment, i, segments) => {
     } else {
         segment = "introduction.html";
     }
-    document.write(`<div><a href="${segment}">${name}</a></div>`)
+    const wrapper = document.createElement('div');
+    const link = document.createElement('a');
+    link.href = segment;
+    link.textContent = name;
+    wrapper.appendChild(link);
+    breadcrumbContainer.appendChild(wrapper);
 });
