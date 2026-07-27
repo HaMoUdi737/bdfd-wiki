@@ -7,26 +7,26 @@ document.addEventListener("DOMContentLoaded", function() {
 
     var dayElement = document.getElementById('day-mark');
     if (dayElement) {
-        dayElement.innerHTML = "Current Day: " + day;
+        dayElement.textContent = "Current Day: " + day;
     }
 
     var unixElement = document.getElementById('unix-mark');
     if (unixElement) {
-        unixElement.innerHTML = "Current Unix-time: " + time;
+        unixElement.textContent = "Current Unix-time: " + time;
     }
 
     var secondElement = document.getElementById('second-mark');
     if (secondElement) {
-        secondElement.innerHTML = "Current Second: " + second;
+        secondElement.textContent = "Current Second: " + second;
     }
 
     var minuteElement = document.getElementById('minute-mark');
     if (minuteElement) {
-        minuteElement.innerHTML = "Current Minute: " + minute;
+        minuteElement.textContent = "Current Minute: " + minute;
     }
 
     var hourElement = document.getElementById('hour-mark');
     if (hourElement) {
-        hourElement.innerHTML = "Current Hour: " + hour;
+        hourElement.textContent = "Current Hour: " + hour;
     }
 });

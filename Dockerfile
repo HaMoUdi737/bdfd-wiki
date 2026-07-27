@@ -1,5 +1,5 @@
 # Use an Ubuntu base image
-FROM ubuntu
+FROM ubuntu:24.04
 
 # Install gh cli
 RUN (type -p wget >/dev/null || (apt update && apt-get install wget -y)) \
