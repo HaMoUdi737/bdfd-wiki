@@ -1,0 +1,13 @@
+{
+  "name": "bdfd-wiki",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Bot Designer For Discord - Wiki",
+  "scripts": {
+    "test": "jest --verbose"
+  },
+  "devDependencies": {
+    "jest": "^29.7.0",
+    "jest-environment-jsdom": "^29.7.0"
+  }
+}
