@@ -18,3 +18,17 @@
 :root img {
     border-radius: 10px;
 }
+
+.bdfd blockquote,
+.green blockquote,
+.ios blockquote {
+    border-left-style: inset;
+    border-color: #e6a700;
+    border-top-color: #4d3800;
+    border-left-width: 7px;
+    border-bottom-color: #4d3800;
+    border-radius: 10px;
+    color: #e1e1e1;
+    --links: #0A95FF;
+    --inline-code-color: #bdbdbd;
+}

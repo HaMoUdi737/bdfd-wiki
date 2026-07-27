@@ -65,10 +65,41 @@ if (window.playground_copyable) {
 		themeToggleButton.focus();
 	}
 
+	const DARK_THEMES = ['coal', 'navy', 'bdfd', 'green', 'ios', 'shiro', 'gluo', 'kneon', 'terminal', 'highcon', 'discord'];
+
+	const MENU_BAR_ELEMENT_IDS = [
+		'menu-bar-sticky-container',
+		'sidebar-toggle',
+		'theme-toggle',
+		'search-toggle',
+		'print-button',
+		'git-repository-button',
+		'git-edit-button'
+	];
+
+	function getStoredTheme() {
+		let theme;
+		try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
+		if (theme === null || theme === undefined) { theme = default_theme; }
+		return theme;
+	}
+
+	function applyMenuBarColors(color, bgColor) {
+		MENU_BAR_ELEMENT_IDS.forEach((id) => {
+			const el = document.getElementById(id);
+			if (el) {
+				el.style.color = color;
+				if (id === 'menu-bar-sticky-container') {
+					el.style.backgroundColor = bgColor;
+				}
+			}
+		});
+	}
+
 	function set_theme(theme, store = true) {
 		let ace_theme;
 
-		if (theme == 'coal' || theme == 'navy' || theme == 'bdfd' || theme == "green" || theme == "ios" || theme == "shiro" || theme == "gluo" || theme == "kneon" || theme == "terminal" || theme == "highcon" || theme == "discord") {
+		if (DARK_THEMES.includes(theme)) {
 			stylesheets.ayuHighlight.disabled = true;
 			stylesheets.tomorrowNight.disabled = false;
 			stylesheets.highlight.disabled = true;
@@ -85,32 +116,10 @@ if (window.playground_copyable) {
 			ace_theme = "ace/theme/dawn";
 		}
 
-		const menuBar = document.getElementById("menu-bar-sticky-container");
-		const sideBarToggle = document.getElementById("sidebar-toggle");
-		const themeToggle = document.getElementById("theme-toggle");
-		const searchToggle = document.getElementById("search-toggle");
-		const printToggle = document.getElementById("print-button");
-		const githubLink = document.getElementById("git-repository-button");
-		const gitEdit = document.getElementById("git-edit-button");
-
 		if (theme == 'bdfd') {
-			menuBar.style.backgroundColor = '#673ab7';
-			menuBar.style.color = '#fff';
-			sideBarToggle.style.color = '#fff';
-			themeToggle.style.color = '#fff';
-			searchToggle.style.color = '#fff';
-			printToggle.style.color = '#fff';
-			githubLink.style.color = '#fff';
-			gitEdit.style.color = '#fff';
+			applyMenuBarColors('#fff', '#673ab7');
 		} else {
-			menuBar.style.backgroundColor = '';
-			menuBar.style.color = '';
-			sideBarToggle.style.color = '';
-			themeToggle.style.color = '';
-			searchToggle.style.color = '';
-			printToggle.style.color = '';
-			githubLink.style.color = '';
-			gitEdit.style.color = '';
+			applyMenuBarColors('', '');
 		}
 
 		setTimeout(() => {
@@ -123,9 +132,7 @@ if (window.playground_copyable) {
 			});
 		}
 
-		let previousTheme;
-		try { previousTheme = localStorage.getItem('mdbook-theme'); } catch (e) { }
-		if (previousTheme === null || previousTheme === undefined) { previousTheme = default_theme; }
+		const previousTheme = getStoredTheme();
 
 		if (store) {
 			try { localStorage.setItem('mdbook-theme', theme); } catch (e) { }
@@ -136,9 +143,7 @@ if (window.playground_copyable) {
 	}
 
 	// Set theme
-	let theme;
-	try { theme = localStorage.getItem('mdbook-theme'); } catch (e) { }
-	if (theme === null || theme === undefined) { theme = default_theme; }
+	let theme = getStoredTheme();
 
 	set_theme(theme, false);
 
